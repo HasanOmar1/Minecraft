@@ -1,12 +1,14 @@
+
 body{
     background: URL(./assets/s.jpg) no-repeat;
+
 }
 
 .startBtn{
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30%;
+margin-top: 10%;
 }
 
 .start{
@@ -24,4 +26,17 @@ margin-top: 30%;
     background-color: rgba(245, 243, 243 , 0.1);
     color: rgb(0, 0, 0 , 1);
     border-color: gold;
+}
+
+.game-rules{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+
+}
+.axe{
+    background: url(./assets/axe.png) no-repeat center center/cover;
 }
