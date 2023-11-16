@@ -1,6 +1,11 @@
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
-    background: URL(./assets/s.jpg) no-repeat;
+    background: URL(./assets/lobby.jpg) no-repeat;
+    font-family: sans-serif , Arial, Helvetica, sans-serif;
 
 }
 
@@ -24,19 +29,58 @@ margin-top: 10%;
 
 .start:hover{
     background-color: rgba(245, 243, 243 , 0.1);
-    color: rgb(0, 0, 0 , 1);
     border-color: gold;
 }
 
 .game-rules{
-    font-size: 2rem;
+    font-size: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 15%;
+    font-weight: bold;
+    color: silver;
 
 }
+ul {
+    list-style: none; 
+}
+  
+ul li::before {
+    content: "\2022";  
+    color: gold; 
+    font-weight: bold; 
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+/* assets */
+/* tools */
 .axe{
     background: url(./assets/axe.png) no-repeat center center/cover;
+}
+.shovel{
+    background: url(./assets/shovel.png) no-repeat center center/cover;
+}
+.pick-axe{
+    background: url(./assets/pick-axe.jpg) no-repeat center center/cover;
+}
+
+/* elements */
+.dirt{
+    background: url(./assets/dirt.jpg) no-repeat center center/cover;
+}
+.grass{
+    background: url(./assets/grass.png) no-repeat center center/cover;
+}
+.log{
+    background: url(./assets/logs.jpg) no-repeat center center/cover;
+}
+.stone{
+    background: url(./assets/stone.jpg) no-repeat center center/cover;
+}
+.tree{
+    background: url(./assets/tree.jpg) no-repeat center center/cover;
 }
