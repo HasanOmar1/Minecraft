@@ -1,3 +1,27 @@
 body{
-    background-color: gray;
+    background: URL(./assets/s.jpg) no-repeat;
+}
+
+.startBtn{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30%;
+}
+
+.start{
+    padding: 50px 100px;
+    border-color: brown;
+    border-radius: 30%;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+
+}
+
+.start:hover{
+    background-color: rgba(245, 243, 243 , 0.1);
+    color: rgb(0, 0, 0 , 1);
+    border-color: gold;
 }
