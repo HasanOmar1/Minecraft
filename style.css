@@ -57,30 +57,3 @@ ul li::before {
 }
 
 /* assets */
-/* tools */
-.axe{
-    background: url(./assets/axe.png) no-repeat center center/cover;
-}
-.shovel{
-    background: url(./assets/shovel.png) no-repeat center center/cover;
-}
-.pick-axe{
-    background: url(./assets/pick-axe.jpg) no-repeat center center/cover;
-}
-
-/* elements */
-.dirt{
-    background: url(./assets/dirt.jpg) no-repeat center center/cover;
-}
-.grass{
-    background: url(./assets/grass.png) no-repeat center center/cover;
-}
-.log{
-    background: url(./assets/logs.jpg) no-repeat center center/cover;
-}
-.stone{
-    background: url(./assets/stone.jpg) no-repeat center center/cover;
-}
-.tree{
-    background: url(./assets/tree.jpg) no-repeat center center/cover;
-}
