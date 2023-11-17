@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background: URL(./assets/lobby.jpg) no-repeat;
+    background: URL(/assets/lobby.jpg) no-repeat;
     font-family: sans-serif , Arial, Helvetica, sans-serif;
 
 }
@@ -48,7 +48,7 @@ ul {
 }
   
 ul li::before {
-    content: "\2022";  
+    content: "\2023";  
     color: gold; 
     font-weight: bold; 
     display: inline-block;
@@ -56,4 +56,4 @@ ul li::before {
     margin-left: -1em; 
 }
 
-/* assets */
+
