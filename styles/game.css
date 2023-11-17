@@ -73,6 +73,7 @@ img{
 
 }
 
+/* reset button */
 .reset{
     position: absolute;
     top: 500px;
@@ -94,4 +95,8 @@ img{
 
 .reset button:hover{
     background-color: red;
+}
+
+.current{
+    background-color: bisque;
 }

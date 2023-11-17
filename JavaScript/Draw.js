@@ -373,6 +373,7 @@ export function curTool(){
 
     if(currentTool === shovel){
         shovel.classList.add('current')
+        shovel.classList.add('shovel')
     if(axe.classList.contains('current') || pickAxe.classList.contains('current') ){
         axe.classList.remove('current')
         pickAxe.classList.remove('current')
