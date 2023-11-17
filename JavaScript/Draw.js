@@ -171,6 +171,7 @@ export function createTree(){
 
     shovel.addEventListener('click' , () => {
         currentTool = shovel
+        curTool()
         tree.addEventListener('click' , () => {
             if(currentTool === shovel && tree.classList.contains('tree')){
                 tree.replaceWith(tree)
@@ -181,6 +182,7 @@ export function createTree(){
 
         axe.addEventListener('click' , () => {
             currentTool = axe
+            curTool()
             tree.addEventListener('click' , () => {
             if(currentTool === axe && tree.classList.contains('tree')){
                 tree.replaceWith(sky)
@@ -191,6 +193,7 @@ export function createTree(){
 
         pickAxe.addEventListener('click' , () => {
             currentTool = pickAxe
+            curTool()
             tree.addEventListener('click' , () => {
             if(currentTool === pickAxe && tree.classList.contains('tree')){
                 tree.replaceWith(tree)
@@ -364,3 +367,33 @@ export function createStone(){
 
         })
 }
+
+
+export function curTool(){
+
+    if(currentTool === shovel){
+        shovel.classList.add('current')
+    if(axe.classList.contains('current') || pickAxe.classList.contains('current') ){
+        axe.classList.remove('current')
+        pickAxe.classList.remove('current')
+    }
+    }
+    
+    if(currentTool === axe){
+        axe.classList.add('current')
+    if(shovel.classList.contains('current') || pickAxe.classList.contains('current') ){
+        shovel.classList.remove('current')
+        pickAxe.classList.remove('current')
+    }
+    }
+    
+    
+    if(currentTool === pickAxe){
+        pickAxe.classList.add('current')
+    if(axe.classList.contains('current') || shovel.classList.contains('current') ){
+        axe.classList.remove('current')
+        shovel.classList.remove('current')
+    }
+    }
+}
+
