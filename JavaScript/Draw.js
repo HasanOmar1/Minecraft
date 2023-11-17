@@ -151,22 +151,24 @@ const inventory = document.querySelector('.inventory')
 
 let currentTool;
 
-
 function newElement(element){
     let inventoryItem = document.createElement('div')
     let item = inventory.classList.item(1)
     if(item !== null){
         inventory.addEventListener('click' , () => {
             let currentElement = localStorage.getItem('element')
+            console.log(currentElement)
             inventoryItem.classList.add(currentElement)
-            console.log(inventoryItem)
 
             element.addEventListener('click', () => {
                 element.replaceWith(inventoryItem)
                 let remove = inventory.classList.item(1)
                 inventory.classList.remove(remove)
+                localStorage.setItem('element' , '')
                 inventoryItem.className = currentElement
-                // console.log(inventoryItem)
+                // if(localStorage.getItem('element') === ''){
+                //     element.replaceWith(element)
+                // }
             })
             });
         }
@@ -177,7 +179,22 @@ function newElement(element){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
     sky.classList.add('sky')
-    // newElement(sky)
+
+    let newElement = document.createElement('div')
+    if(inventory.classList.item(1) === null){
+        //get localstorage
+        newElement.className = 'dirt'
+    }
+    // newElement.className = 'tree'
+    inventory.addEventListener('click' , () => {
+        // if(inventory.class)
+        sky.addEventListener('click' ,() => {
+            sky.replaceWith(newElement)
+            // inventory.className = 'inventory'
+               
+        })
+
+    })
 
 }
 
@@ -213,7 +230,7 @@ function newElement(element){
                 localStorage.setItem('element' , tree.classList)
                 tree.replaceWith(sky)
                 inventory.className = 'inventory tree'
-                // newElement(sky)
+                newElement(sky)
             }
                 })
 
@@ -258,7 +275,7 @@ function newElement(element){
                 localStorage.setItem('element' , log.classList)
                 log.replaceWith(sky)
                 inventory.className = 'inventory log'
-                // newElement(sky)
+                newElement(sky)
             }
                 })
 
@@ -292,7 +309,7 @@ function newElement(element){
                 localStorage.setItem('element' , grass.classList)
                 grass.replaceWith(sky)
                 inventory.className = 'inventory grass'
-                // newElement(sky)
+                newElement(sky)
                 
             }
         })
@@ -401,7 +418,7 @@ function newElement(element){
                 localStorage.setItem('element' , stone.classList)
                 stone.replaceWith(sky)
                 inventory.className = 'inventory stone'
-                // newElement(sky)
+                newElement(sky)
                 
             }
                 })
