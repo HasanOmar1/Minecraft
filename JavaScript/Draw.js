@@ -151,29 +151,33 @@ const inventory = document.querySelector('.inventory')
 
 let currentTool;
 
-function newElement(element){
-inventory.addEventListener('click' , () => {
-    let item = inventory.classList.item(1)
-    let inventoryItem = document.createElement('div')
-    inventoryItem.classList.add(item)
-    element.addEventListener('click', () => {
-        element.replaceWith(inventoryItem)
-        let remove = inventory.classList.item(1)
-        inventory.classList.remove(remove)
-    } , { once : true});
-})
-}
 
-function test(){
-    createSky()
-    newElement(sky)
-}
+function newElement(element){
+    let inventoryItem = document.createElement('div')
+    let item = inventory.classList.item(1)
+    if(item !== null){
+        inventory.addEventListener('click' , () => {
+            let currentElement = localStorage.getItem('element')
+            inventoryItem.classList.add(currentElement)
+            console.log(inventoryItem)
+
+            element.addEventListener('click', () => {
+                element.replaceWith(inventoryItem)
+                let remove = inventory.classList.item(1)
+                inventory.classList.remove(remove)
+                inventoryItem.className = currentElement
+                // console.log(inventoryItem)
+            })
+            });
+        }
+
+    }
 
  function createSky(){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
     sky.classList.add('sky')
-    newElement(sky)
+    // newElement(sky)
 
 }
 
@@ -190,7 +194,6 @@ function test(){
 
     let sky = document.createElement('div')
     sky.classList.add('sky')
-
     shovel.addEventListener('click' , () => {
         currentTool = shovel
         curTool()
@@ -207,9 +210,10 @@ function test(){
             curTool()
             tree.addEventListener('click' , () => {
             if(currentTool === axe && tree.classList.contains('tree')){
+                localStorage.setItem('element' , tree.classList)
                 tree.replaceWith(sky)
                 inventory.className = 'inventory tree'
-                newElement(sky)
+                // newElement(sky)
             }
                 })
 
@@ -251,9 +255,10 @@ function test(){
             currentTool = axe
             log.addEventListener('click' , () => {
             if(currentTool === axe && log.classList.contains('log')){
+                localStorage.setItem('element' , log.classList)
                 log.replaceWith(sky)
                 inventory.className = 'inventory log'
-                newElement(sky)
+                // newElement(sky)
             }
                 })
 
@@ -284,9 +289,10 @@ function test(){
         currentTool = shovel
         grass.addEventListener('click' , () => {
             if(currentTool === shovel && grass.classList.contains('grass')){
+                localStorage.setItem('element' , grass.classList)
                 grass.replaceWith(sky)
                 inventory.className = 'inventory grass'
-                newElement(sky)
+                // newElement(sky)
                 
             }
         })
@@ -327,6 +333,8 @@ function test(){
         currentTool = shovel
         dirt.addEventListener('click' , () => {
             if(currentTool === shovel && dirt.classList.contains('dirt')){
+                localStorage.setItem('element' , dirt.classList)
+                // let currentElement = localStorage.getItem('element')
                 dirt.replaceWith(sky)
                 inventory.className = 'inventory dirt'
                 newElement(sky)
@@ -334,7 +342,7 @@ function test(){
             }
         })
     })
-
+    
         axe.addEventListener('click' , () => {
             currentTool = axe
             dirt.addEventListener('click' , () => {
@@ -354,7 +362,6 @@ function test(){
                 })
 
         })
-  
 }
 
 
@@ -392,12 +399,13 @@ function test(){
             currentTool = pickAxe
             stone.addEventListener('click' , () => {
             if(currentTool === pickAxe && stone.classList.contains('stone')){
+                localStorage.setItem('element' , stone.classList)
                 stone.replaceWith(sky)
                 inventory.className = 'inventory stone'
+                // newElement(sky)
                 
             }
                 })
-                newElement(sky)
 
         })
 }

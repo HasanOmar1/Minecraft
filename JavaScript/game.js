@@ -7,9 +7,6 @@ resetBtn.addEventListener('click' , () => {
     window.location = window.location
 })
     
-    
-   
-
 function game(){
     draw.drawGame()
 }

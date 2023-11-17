@@ -21,11 +21,11 @@ height: 900px;
 
 .tools{
     position: absolute;
-    border: 1px solid black;
     width: 200px;
     height: 600px;
     top: 30px;
     left: 30px;
+    background-color: rgba(69, 25, 110 , .4)
     
 }
 
@@ -59,7 +59,7 @@ img{
 #pick-axe:hover ,
 #axe:hover ,
 #shovel:hover {
-    background-color: darkgoldenrod;
+    background-color: darkcyan;
     cursor: pointer;
 }
 
@@ -99,5 +99,5 @@ img{
 }
 
 .current{
-    background-color: bisque;
+    background-color: darkgoldenrod;
 }
