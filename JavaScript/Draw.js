@@ -334,7 +334,6 @@ function newElement(element){
         dirt.addEventListener('click' , () => {
             if(currentTool === shovel && dirt.classList.contains('dirt')){
                 localStorage.setItem('element' , dirt.classList)
-                // let currentElement = localStorage.getItem('element')
                 dirt.replaceWith(sky)
                 inventory.className = 'inventory dirt'
                 newElement(sky)
