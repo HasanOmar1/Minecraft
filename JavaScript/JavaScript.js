@@ -2,6 +2,6 @@
 
 const startBtn = document.querySelector('.start')
 startBtn.addEventListener(`click` , () => {
-    document.location.href = './play-game/start.html'
+    document.location.href = '/game.html'
 })
 
