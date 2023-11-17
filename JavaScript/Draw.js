@@ -3,6 +3,7 @@
 
 const blocks = document.querySelector('.blocks')
 
+
 //this function hardcodes the game
 export function drawGame(){
 
@@ -146,22 +147,43 @@ for(let i = 0 ; i < 9 ; i++){
 const shovel = document.querySelector('#shovel')
 const axe = document.querySelector('#axe')
 const pickAxe = document.querySelector('#pick-axe')
+const inventory = document.querySelector('.inventory')
 
 let currentTool;
 
-export function createSky(){
+function newElement(element){
+inventory.addEventListener('click' , () => {
+    let item = inventory.classList.item(1)
+    let inventoryItem = document.createElement('div')
+    inventoryItem.classList.add(item)
+    element.addEventListener('click', () => {
+        element.replaceWith(inventoryItem)
+        let remove = inventory.classList.item(1)
+        inventory.classList.remove(remove)
+    } , { once : true});
+})
+}
+
+function test(){
+    createSky()
+    newElement(sky)
+}
+
+ function createSky(){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
     sky.classList.add('sky')
+    newElement(sky)
+
 }
 
-export function createCloud(){
+ function createCloud(){
     let cloud = document.createElement('div')
     blocks.appendChild(cloud)
     cloud.classList.add('cloud')
 }
 
-export function createTree(){
+ function createTree(){
     let tree = document.createElement('div')
     blocks.appendChild(tree)
     tree.classList.add('tree')
@@ -186,6 +208,8 @@ export function createTree(){
             tree.addEventListener('click' , () => {
             if(currentTool === axe && tree.classList.contains('tree')){
                 tree.replaceWith(sky)
+                inventory.className = 'inventory tree'
+                newElement(sky)
             }
                 })
 
@@ -205,7 +229,7 @@ export function createTree(){
 
 }
 
-export function createLog(){
+ function createLog(){
     let log = document.createElement('div')
     blocks.appendChild(log)
     log.classList.add('log')
@@ -228,6 +252,8 @@ export function createLog(){
             log.addEventListener('click' , () => {
             if(currentTool === axe && log.classList.contains('log')){
                 log.replaceWith(sky)
+                inventory.className = 'inventory log'
+                newElement(sky)
             }
                 })
 
@@ -246,7 +272,7 @@ export function createLog(){
 
 }
 
-export function createGrass(){
+ function createGrass(){
     let grass = document.createElement('div')
     blocks.appendChild(grass)
     grass.classList.add('grass')
@@ -259,6 +285,8 @@ export function createGrass(){
         grass.addEventListener('click' , () => {
             if(currentTool === shovel && grass.classList.contains('grass')){
                 grass.replaceWith(sky)
+                inventory.className = 'inventory grass'
+                newElement(sky)
                 
             }
         })
@@ -287,7 +315,7 @@ export function createGrass(){
     }
 
 
-export function createDirt(){
+ function createDirt(){
     let dirt = document.createElement('div')
     blocks.appendChild(dirt)
     dirt.classList.add('dirt')
@@ -300,6 +328,8 @@ export function createDirt(){
         dirt.addEventListener('click' , () => {
             if(currentTool === shovel && dirt.classList.contains('dirt')){
                 dirt.replaceWith(sky)
+                inventory.className = 'inventory dirt'
+                newElement(sky)
                 
             }
         })
@@ -329,7 +359,7 @@ export function createDirt(){
 
 
 
-export function createStone(){
+ function createStone(){
     let stone = document.createElement('div')
     blocks.appendChild(stone)
     stone.classList.add('stone')
@@ -352,6 +382,7 @@ export function createStone(){
             stone.addEventListener('click' , () => {
             if(currentTool === axe && stone.classList.contains('stone')){
                 stone.replaceWith(stone)
+               
             }
                 })
 
@@ -362,18 +393,62 @@ export function createStone(){
             stone.addEventListener('click' , () => {
             if(currentTool === pickAxe && stone.classList.contains('stone')){
                 stone.replaceWith(sky)
+                inventory.className = 'inventory stone'
+                
             }
                 })
+                newElement(sky)
 
         })
 }
 
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//     stone.addEventListener('click', () => {
+//         stone.replaceWith(item)
+//     })
+// })
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//     dirt.addEventListener('click', () => {
+//         dirt.replaceWith(item)
+//     })
+// })
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//     grass.addEventListener('click', () => {
+//         grass.replaceWith(item)
+//     })
+// })
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//     log.addEventListener('click', () => {
+//         log.replaceWith(item)
+//     })
+// })
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//     tree.addEventListener('click', () => {
+//         tree.replaceWith(item)
+//     })
+// })
+// inventory.addEventListener('click' , () => {
+//     let item = inventory.classList.item(1)
+//    sky.addEventListener('click', () => {
+//        sky.replaceWith(item)
+//     })
+// })
 
-export function curTool(){
+
+
+    
+
+
+
+ function curTool(){
 
     if(currentTool === shovel){
         shovel.classList.add('current')
-        shovel.classList.add('shovel')
     if(axe.classList.contains('current') || pickAxe.classList.contains('current') ){
         axe.classList.remove('current')
         pickAxe.classList.remove('current')
@@ -397,4 +472,5 @@ export function curTool(){
     }
     }
 }
+
 
