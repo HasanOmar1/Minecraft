@@ -1,45 +1,9 @@
-/* elements */
-.dirt-img{
-    background: url(/assets/dirt.jpg);
-
-}
-.grass-img{
-    background: url(/assets/grass.png) no-repeat center center/cover;
-
-}
-.log-img{
-    background: url(/assets/logs.jpg) no-repeat center center/cover;
-
-}
-.stone-img{
-    background: url(/assets/stone.jpg) no-repeat center center/cover;
-
-}
-.tree-img{
-    background: url(/assets/tree.jpg) no-repeat center center/cover;
-
-}
-
-/* tools */
-.axe{
-    background: url(/assets/axe.png) no-repeat center center/cover;
-
-}
-.shovel{
-    background: url(/assets/shovel.png) no-repeat center center/cover;
-
-}
-.pick-axe{
-    background: url(/assets/pick-axe.jpg) no-repeat center center/cover;
-}
-
 
 /* BLOCKS */
 
 .blocks{
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .sky{
