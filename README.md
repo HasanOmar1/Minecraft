@@ -19,6 +19,8 @@ You will have only 3 types of tools:
 
 When you remove blocks , ONLY the last removed block will go to your inventory and you can use it once again.
 
+Click on RESET to reset the game. 🐱‍👤
+
 # Preview of the game
 
 ![Alt text](game.png)
