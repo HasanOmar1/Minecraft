@@ -152,7 +152,6 @@ const inventory = document.querySelector('.inventory')
 let currentTool;
 
 
-
  function createSky(){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
@@ -169,6 +168,56 @@ let currentTool;
                 localStorage.clear()
             }
         })
+    })
+    sky.addEventListener('click' , () => {
+        if(currentTool === axe && sky.classList.contains('tree')){
+            localStorage.setItem('element' , sky.classList)
+            sky.className = 'new-sky'
+            inventory.className = 'inventory tree'
+            if(inventory.classList.item(1) !== null){
+                inventory.style.border = "2px solid blue"
+            }
+        }
+    })
+    sky.addEventListener('click' , () => {
+        if(currentTool === axe && sky.classList.contains('log')){
+            localStorage.setItem('element' , sky.classList)
+            sky.className = 'new-sky'
+            inventory.className = 'inventory log'
+            if(inventory.classList.item(1) !== null){
+                inventory.style.border = "2px solid blue"
+            }
+        }
+    })
+    sky.addEventListener('click' , () => {
+        if(currentTool === shovel && sky.classList.contains('dirt')){
+            localStorage.setItem('element' , sky.classList)
+            sky.className = 'new-sky'
+            inventory.className = 'inventory dirt'
+            if(inventory.classList.item(1) !== null){
+                inventory.style.border = "2px solid blue"
+            }
+        }
+    })
+    sky.addEventListener('click' , () => {
+        if(currentTool === shovel && sky.classList.contains('grass')){
+            localStorage.setItem('element' , sky.classList)
+            sky.className = 'new-sky'
+            inventory.className = 'inventory grass'
+            if(inventory.classList.item(1) !== null){
+                inventory.style.border = "2px solid blue"
+            }
+        }
+    })
+    sky.addEventListener('click' , () => {
+        if(currentTool === pickAxe && sky.classList.contains('stone')){
+            localStorage.setItem('element' , sky.classList)
+            sky.className = 'new-sky'
+            inventory.className = 'inventory stone'
+            if(inventory.classList.item(1) !== null){
+                inventory.style.border = "2px solid blue"
+            }
+        }
     })
 }
             
@@ -195,8 +244,8 @@ let currentTool;
                 
             }
         })
-    })
 
+    })
         axe.addEventListener('click' , () => {
             currentTool = axe
             curTool()
@@ -208,6 +257,7 @@ let currentTool;
                 if(inventory.classList.item(1) !== null){
                     inventory.style.border = "2px solid blue"
                 }
+                
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -217,14 +267,13 @@ let currentTool;
                                 inventory.style.border = "2px solid black"
                                 }
                             localStorage.clear()
-                       
                     }
+                    
                     })
-        
+
             })
             }
                 })
-
         })
 
         pickAxe.addEventListener('click' , () => {
