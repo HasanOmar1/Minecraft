@@ -161,7 +161,6 @@ let currentTool;
         
         sky.addEventListener('click' , e => {
             if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                console.log(e.target)
                 e.target.className = localStorage.getItem('element')
                 inventory.className = 'inventory'
                 if(inventory.classList.item(1) === null){
@@ -212,7 +211,6 @@ let currentTool;
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            console.log(e.target)
                             e.target.className = localStorage.getItem('element')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
@@ -273,7 +271,6 @@ let currentTool;
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            console.log(e.target)
                             e.target.className = localStorage.getItem('element')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
@@ -323,7 +320,6 @@ let currentTool;
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            console.log(e.target)
                             e.target.className = localStorage.getItem('element')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
@@ -383,7 +379,6 @@ let currentTool;
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            console.log(e.target)
                             e.target.className = localStorage.getItem('element')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
@@ -465,7 +460,6 @@ let currentTool;
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            console.log(e.target)
                             e.target.className = localStorage.getItem('element')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
