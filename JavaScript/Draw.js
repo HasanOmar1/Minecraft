@@ -261,8 +261,9 @@ let currentTool;
                 
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
-                        if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                            e.target.className = localStorage.getItem('element')
+                        if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null ||
+                        e.target.classList.contains("sky") && localStorage.getItem('newElement') !== null){
+                            e.target.className = localStorage.getItem('element') || localStorage.getItem('newElement')
                             inventory.className = 'inventory'
                             if(inventory.classList.item(1) === null){
                                 inventory.style.border = "2px solid black"
@@ -272,6 +273,17 @@ let currentTool;
                     
                     })
             })
+            // sky.addEventListener('click' , () => {
+            //     if(currentTool === axe && sky.classList.contains('tree')){
+            //         localStorage.setItem('newElement' , sky.classList.item(0))
+            //         sky.className = 'sky'
+            //         console.log(sky)
+            //         inventory.className = 'inventory tree'
+            //         if(inventory.classList.item(1) !== null){
+            //             inventory.style.border = "2px solid blue"
+            //         }
+            //     }
+            // })
             }
                 })
         })
