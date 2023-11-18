@@ -257,8 +257,7 @@ let currentTool;
                 inventory.className = 'inventory tree'
                 if(inventory.classList.item(1) !== null){
                     inventory.style.border = "2px solid blue"
-                }
-                
+                }                
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null ||
