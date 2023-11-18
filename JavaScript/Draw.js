@@ -165,11 +165,11 @@ let currentTool;
                 if(inventory.classList.item(1) === null){
                     inventory.style.border = "2px solid black"
                     }
-                // localStorage.clear()
                 localStorage.removeItem('element')
             }
         })
     })
+
     sky.addEventListener('click' , () => {
         if(currentTool === axe && sky.classList.contains('tree')){
             localStorage.setItem('newElement' , sky.classList.item(0))
@@ -220,17 +220,7 @@ let currentTool;
             }
         }
     })
-    // sky.addEventListener('click' , e => {
-    //     if(e.target.classList.contains("sky") && localStorage.getItem('newElement') !== null ){
-    //         e.target.className = localStorage.getItem('newElement')
-    //         inventory.className = 'inventory'
-    //         if(inventory.classList.item(1) === null){
-    //             inventory.style.border = "2px solid black"
-    //             }
-    //         // localStorage.clear()
-    //         // localStorage.removeItem('newElement')
-    //     }
-    // })
+
 }
             
 
