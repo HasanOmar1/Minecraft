@@ -21,6 +21,11 @@ When you remove blocks , ONLY the last removed block will go to your inventory a
 
 Click on RESET to reset the game. 🐱‍👤
 
+## Known bugs:
+
+Removing a block then adding it then removing it allows u to put back the block only at certain places
+and you cant remove it again
+
 # Preview of the game
 
 ![Alt text](game.png)
