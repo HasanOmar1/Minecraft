@@ -545,7 +545,7 @@ let currentTool;
         axe.classList.add('current')
         document.body.classList.add('axe-cursor')
     if(shovel.classList.contains('current') || pickAxe.classList.contains('current') ||
-    document.body.classList.contains('shovel-cursor') || document.body.classList.contains('pickaxe-cursor')){
+        document.body.classList.contains('shovel-cursor') || document.body.classList.contains('pickaxe-cursor')){
         shovel.classList.remove('current')
         pickAxe.classList.remove('current')
         document.body.classList.remove('shovel-cursor')
@@ -558,7 +558,7 @@ let currentTool;
         pickAxe.classList.add('current')
         document.body.classList.add(`pickaxe-cursor`)
     if(axe.classList.contains('current') || shovel.classList.contains('current') ||
-    document.body.classList.contains('axe-cursor') || document.body.classList.contains('shovel-cursor')){
+        document.body.classList.contains('axe-cursor') || document.body.classList.contains('shovel-cursor')){
         axe.classList.remove('current')
         shovel.classList.remove('current')
         document.body.classList.remove('axe-cursor')
