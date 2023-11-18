@@ -14,7 +14,7 @@ But there is a catch , you can only use the last element in the inventory to bui
 You will have only 3 types of tools:
 
 - Axe : for cutting trees and logs.
-- Pickaxe : for minning rocks.
+- Pickaxe : for mining rocks.
 - Shovel : for digging dirt.
 
 When you remove blocks , ONLY the last removed block will go to your inventory and you can use it once again.
