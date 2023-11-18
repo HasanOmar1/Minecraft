@@ -65,11 +65,11 @@ img{
 
 .inventory{
     position: absolute;
-    width: 50px;
+    width: 44px;
     height: 50px;
     top: 420px;
     left: 70px;
-    border: 1px solid black;
+    border: 2px solid black;
     cursor: pointer;
 
 }
