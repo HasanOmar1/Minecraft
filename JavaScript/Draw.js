@@ -217,7 +217,8 @@ let currentTool;
                                 inventory.style.border = "2px solid black"
                                 }
                             localStorage.clear()
-                        }
+                       
+                    }
                     })
         
             })
