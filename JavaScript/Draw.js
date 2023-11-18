@@ -2,7 +2,7 @@
 // Drawing the Game
 
 const blocks = document.querySelector('.blocks')
-
+const game = document.querySelector('.game')
 
 //this function hardcodes the game
 export function drawGame(){
@@ -165,7 +165,8 @@ let currentTool;
                 if(inventory.classList.item(1) === null){
                     inventory.style.border = "2px solid black"
                     }
-                localStorage.clear()
+                // localStorage.clear()
+                localStorage.removeItem('element')
             }
         })
     })
@@ -253,6 +254,7 @@ let currentTool;
             tree.addEventListener('click' , () => {
             if(currentTool === axe && tree.classList.contains('tree')){
                 localStorage.setItem('element' , tree.classList)
+                localStorage.removeItem('newElement')
                 tree.replaceWith(sky)
                 inventory.className = 'inventory tree'
                 if(inventory.classList.item(1) !== null){
@@ -529,26 +531,38 @@ let currentTool;
 
     if(currentTool === shovel){
         shovel.classList.add('current')
-    if(axe.classList.contains('current') || pickAxe.classList.contains('current') ){
+        document.body.classList.add('shovel-cursor')
+    if(axe.classList.contains('current') || pickAxe.classList.contains('current') ||
+        document.body.contains('axe-cursor') || document.body.contains('pickaxe-cursor')){
         axe.classList.remove('current')
         pickAxe.classList.remove('current')
+        document.body.classList.remove('axe-cursor')
+        document.body.classList.remove('pickaxe-cursor')
     }
     }
     
     if(currentTool === axe){
         axe.classList.add('current')
-    if(shovel.classList.contains('current') || pickAxe.classList.contains('current') ){
+        document.body.classList.add('axe-cursor')
+    if(shovel.classList.contains('current') || pickAxe.classList.contains('current') ||
+    document.body.classList.contains('shovel-cursor') || document.body.classList.contains('pickaxe-cursor')){
         shovel.classList.remove('current')
         pickAxe.classList.remove('current')
+        document.body.classList.remove('shovel-cursor')
+        document.body.classList.remove('pickaxe-cursor')
     }
     }
     
     
     if(currentTool === pickAxe){
         pickAxe.classList.add('current')
-    if(axe.classList.contains('current') || shovel.classList.contains('current') ){
+        document.body.classList.add(`pickaxe-cursor`)
+    if(axe.classList.contains('current') || shovel.classList.contains('current') ||
+    document.body.classList.contains('axe-cursor') || document.body.classList.contains('shovel-cursor')){
         axe.classList.remove('current')
         shovel.classList.remove('current')
+        document.body.classList.remove('axe-cursor')
+        document.body.classList.remove('shovel-cursor')
     }
     }
 }

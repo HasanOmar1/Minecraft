@@ -9,6 +9,7 @@
 body{
     background-color: gray;
     font-family:  'Minecraft' ,   sans-serif , Arial, Helvetica, sans-serif;
+
 }
 
 /* game container */
@@ -104,4 +105,13 @@ img{
 
 .current{
     background-color: darkgoldenrod;
+}
+.axe-cursor{
+    cursor: url(/assets/axe-cursor.cur) , auto;
+}
+.pickaxe-cursor{
+    cursor: url(/assets/pickaxe-cursor.cur) , auto;
+}
+.shovel-cursor{
+    cursor: url(/assets/shovel-cursor.cur) , auto;
 }
