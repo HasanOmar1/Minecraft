@@ -152,35 +152,23 @@ const inventory = document.querySelector('.inventory')
 let currentTool;
 
 
-// sky.addEventListener('click' , e => {
-//     if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-//         console.log(e.target)
-//         e.target.className = localStorage.getItem('element')
-//         inventory.className = 'inventory'
-//         localStorage.clear()
-//     }
-// })
-
-
-
  function createSky(){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
     sky.classList.add('sky')
     inventory.addEventListener('click' , () => {
-            sky.addEventListener('click' , e => {
-                if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
-                    console.log(e.target)
-                    e.target.className = localStorage.getItem('element')
-                    inventory.className = 'inventory'
-                    localStorage.clear()
-                }
-            })
-
+        
+        sky.addEventListener('click' , e => {
+            if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
+                console.log(e.target)
+                e.target.className = localStorage.getItem('element')
+                inventory.className = 'inventory'
+                localStorage.clear()
+            }
+        })
     })
 }
             
-
 
  function createCloud(){
     let cloud = document.createElement('div')
@@ -214,7 +202,6 @@ let currentTool;
                 localStorage.setItem('element' , tree.classList)
                 tree.replaceWith(sky)
                 inventory.className = 'inventory tree'
-                // newElement(sky)
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -270,7 +257,6 @@ let currentTool;
                 localStorage.setItem('element' , log.classList)
                 log.replaceWith(sky)
                 inventory.className = 'inventory log'
-                // newElement(sky)
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -315,7 +301,6 @@ let currentTool;
                 localStorage.setItem('element' , grass.classList)
                 grass.replaceWith(sky)
                 inventory.className = 'inventory grass'
-                // newElement(sky)
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -370,7 +355,6 @@ let currentTool;
                 localStorage.setItem('element' , dirt.classList)
                 dirt.replaceWith(sky)
                 inventory.className = 'inventory dirt'
-                // newElement(sky)
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -446,7 +430,6 @@ let currentTool;
                 localStorage.setItem('element' , stone.classList)
                 stone.replaceWith(sky)
                 inventory.className = 'inventory stone'
-                // newElement(sky)
                 inventory.addEventListener('click' , () => {
                     sky.addEventListener('click' , e => {
                         if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
@@ -464,49 +447,6 @@ let currentTool;
 
         })
 }
-
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//     stone.addEventListener('click', () => {
-//         stone.replaceWith(item)
-//     })
-// })
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//     dirt.addEventListener('click', () => {
-//         dirt.replaceWith(item)
-//     })
-// })
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//     grass.addEventListener('click', () => {
-//         grass.replaceWith(item)
-//     })
-// })
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//     log.addEventListener('click', () => {
-//         log.replaceWith(item)
-//     })
-// })
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//     tree.addEventListener('click', () => {
-//         tree.replaceWith(item)
-//     })
-// })
-// inventory.addEventListener('click' , () => {
-//     let item = inventory.classList.item(1)
-//    sky.addEventListener('click', () => {
-//        sky.replaceWith(item)
-//     })
-// })
-
-
-
-    
-
-
 
  function curTool(){
 
