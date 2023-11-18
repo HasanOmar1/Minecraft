@@ -287,8 +287,6 @@ let currentTool;
                 })
 
         })
-
-
 }
 
  function createLog(){
@@ -347,8 +345,6 @@ let currentTool;
                 })
 
         })
-
-
 }
 
  function createGrass(){
@@ -407,7 +403,6 @@ let currentTool;
                 })
 
         })
-    
     }
 
 
@@ -528,8 +523,6 @@ let currentTool;
                 
             }
                 })
-                
-
         })
 }
 
