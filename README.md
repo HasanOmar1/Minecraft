@@ -23,7 +23,7 @@ Click on RESET to reset the game. 🐱‍👤
 
 ## Known bugs:
 
-Removing a block then adding it then removing it allows u to put back the block only at certain places
+Removing a block then adding it then removing it allows u to put back the block only connected to other blocks
 and you cant remove it again
 
 # Preview of the game
