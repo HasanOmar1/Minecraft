@@ -151,52 +151,67 @@ const inventory = document.querySelector('.inventory')
 
 let currentTool;
 
-function newElement(element){
-    let inventoryItem = document.createElement('div')
-    let item = inventory.classList.item(1)
-    if(item !== null){
-        inventory.addEventListener('click' , () => {
-            let currentElement = localStorage.getItem('element')
-            console.log(currentElement)
-            inventoryItem.classList.add(currentElement)
+// function newElement(element){
+//     let inventoryItem = document.createElement('div')
+//     let item = inventory.classList.item(1)
+//     if(item !== null){
+//         inventory.addEventListener('click' , () => {
+//             let currentElement = localStorage.getItem('element')
+//             console.log(currentElement)
+//             inventoryItem.classList.add(currentElement)
 
-            element.addEventListener('click', () => {
-                element.replaceWith(inventoryItem)
-                let remove = inventory.classList.item(1)
-                inventory.classList.remove(remove)
-                localStorage.setItem('element' , '')
-                inventoryItem.className = currentElement
-                // if(localStorage.getItem('element') === ''){
-                //     element.replaceWith(element)
-                // }
-            })
-            });
-        }
+//             element.addEventListener('click', () => {
+//                 element.replaceWith(inventoryItem)
+//                 let remove = inventory.classList.item(1)
+//                 inventory.classList.remove(remove)
+//                 localStorage.setItem('element' , '')
+//                 inventoryItem.className = currentElement
+//                 // if(localStorage.getItem('element') === ''){
+//                 //     element.replaceWith(element)
+//                 // }
+//             })
+//             });
+//         }
 
-    }
+//     }
 
  function createSky(){
     let sky = document.createElement('div')
     blocks.appendChild(sky)
     sky.classList.add('sky')
-
-    let newElement = document.createElement('div')
-    if(inventory.classList.item(1) === null){
-        //get localstorage
-        newElement.className = 'dirt'
-    }
-    // newElement.className = 'tree'
     inventory.addEventListener('click' , () => {
-        // if(inventory.class)
-        sky.addEventListener('click' ,() => {
-            sky.replaceWith(newElement)
-            // inventory.className = 'inventory'
-               
-        })
+            sky.addEventListener('click' , e => {
+                if(e.target.classList.contains("sky") && localStorage.getItem('element') !== null){
+                    console.log(e.target)
+                    e.target.className = localStorage.getItem('element')
+                    inventory.className = 'inventory'
+                    localStorage.clear()
+                }
+            })
 
     })
-
 }
+            // console.log(e.target)
+      
+
+ 
+    // let newElement = document.createElement('div')
+    // if(inventory.classList.item(1) === null){
+    //     //get localstorage
+    //     // newElement.className = 'dirt'
+    // }
+    // // newElement.className = 'tree'
+    // inventory.addEventListener('click' , () => {
+    //     // if(inventory.class)
+    //     sky.addEventListener('click' ,() => {
+    //         sky.replaceWith(newElement)
+    //         // inventory.className = 'inventory'
+               
+    //     })
+
+    // })
+
+
 
  function createCloud(){
     let cloud = document.createElement('div')
@@ -230,7 +245,7 @@ function newElement(element){
                 localStorage.setItem('element' , tree.classList)
                 tree.replaceWith(sky)
                 inventory.className = 'inventory tree'
-                newElement(sky)
+                // newElement(sky)
             }
                 })
 
@@ -275,7 +290,7 @@ function newElement(element){
                 localStorage.setItem('element' , log.classList)
                 log.replaceWith(sky)
                 inventory.className = 'inventory log'
-                newElement(sky)
+                // newElement(sky)
             }
                 })
 
@@ -309,7 +324,7 @@ function newElement(element){
                 localStorage.setItem('element' , grass.classList)
                 grass.replaceWith(sky)
                 inventory.className = 'inventory grass'
-                newElement(sky)
+                // newElement(sky)
                 
             }
         })
@@ -353,7 +368,7 @@ function newElement(element){
                 localStorage.setItem('element' , dirt.classList)
                 dirt.replaceWith(sky)
                 inventory.className = 'inventory dirt'
-                newElement(sky)
+                // newElement(sky)
                 
             }
         })
@@ -418,7 +433,7 @@ function newElement(element){
                 localStorage.setItem('element' , stone.classList)
                 stone.replaceWith(sky)
                 inventory.className = 'inventory stone'
-                newElement(sky)
+                // newElement(sky)
                 
             }
                 })
