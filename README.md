@@ -17,7 +17,7 @@ You will have only 3 types of tools:
 - Pickaxe : for minning rocks.
 - Shovel : for digging dirt.
 
-When you remove blocks , the last removed block will go to your inventory and you can use it once again.
+When you remove blocks , ONLY the last removed block will go to your inventory and you can use it once again.
 
 # Preview of the game
 
