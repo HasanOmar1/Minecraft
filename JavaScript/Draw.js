@@ -5,143 +5,60 @@ const blocks = document.querySelector('.blocks')
 const game = document.querySelector('.game')
 
 //this function hardcodes the game
-export function drawGame(){
 
-for(let i = 0 ; i < 108 ; i++){
-    createSky()
+const map = (blocksLength , callback) => {
+    for(let i = 0 ;  i < blocksLength ; i++){
+        callback()
+    }
 }
-for(let i = 0 ; i < 10 ; i++){
-    createCloud()
-}
-for(let i = 0 ; i < 27 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 8 ; i++){
-    createCloud()
-}
-for(let i = 0 ; i < 123 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createTree()
-}
-for(let i = 0 ; i < 18 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createTree()
-}
-for(let i = 0 ; i < 10 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createTree()
-}
-for(let i = 0 ; i < 18 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createTree()
-}
-for(let i = 0 ; i < 11 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createLog()
-}
-for(let i = 0 ; i < 20 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createLog()
-}
-for(let i = 0 ; i < 12 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createLog()
-}
-for(let i = 0 ; i < 20 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createLog()
-}
-for(let i = 0 ; i < 7 ; i++){
-    createSky()
-}
-for(let i = 0 ; i < 34 ; i++){
-    createGrass()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 6 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 2 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 8 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 12 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 12 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 12 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 5 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 6 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 2 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 4 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 2 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 6 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 3 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 46 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 6 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 21 ; i++){
-    createDirt()
-}
-for(let i = 0 ; i < 1 ; i++){
-    createStone()
-}
-for(let i = 0 ; i < 9 ; i++){
-    createDirt()
-}
+
+export function drawGame(){
+    map(108 , createSky)
+    map(10 , createCloud)
+    map(27 , createSky)
+    map(8 , createCloud)
+    map(123 , createSky)
+    map(3 , createTree)
+    map(18 , createSky)
+    map(3 , createTree)
+    map(10 , createSky)
+    map(3 , createTree)
+    map(18 , createSky)
+    map(3 , createTree)
+    map(11 , createSky)
+    map(1 , createLog)
+    map(20 , createSky)
+    map(1 , createLog)
+    map(12 , createSky)
+    map(1 , createLog)
+    map(20 , createSky)
+    map(1 , createLog)
+    map(7 , createSky)
+    map(34 , createGrass)
+    map(1 , createDirt)
+    map(3 , createStone)
+    map(6 , createDirt)
+    map(2 , createStone)
+    map(8 , createDirt)
+    map(1 , createStone)
+    map(12 , createDirt)
+    map(1 , createStone)
+    map(12 , createDirt)
+    map(1 , createStone)
+    map(12 , createDirt)
+    map(5 , createStone)
+    map(6 , createDirt)
+    map(2 , createStone)
+    map(4 , createDirt)
+    map(2 , createStone)
+    map(6 , createDirt)
+    map(3 , createStone)
+    map(46 , createDirt)
+    map(6 , createStone)
+    map(21 , createDirt)
+    map(1 , createStone)
+    map(9 , createDirt)
+
 }
 
 const shovel = document.querySelector('#shovel')
