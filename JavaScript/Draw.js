@@ -1,10 +1,5 @@
- 
-// Drawing the Game
 
 const blocks = document.querySelector('.blocks')
-const game = document.querySelector('.game')
-
-//this function hardcodes the game
 
 const drawMap = (blocksLength , callback) => {
     for(let i = 0 ;  i < blocksLength ; i++){
@@ -12,6 +7,7 @@ const drawMap = (blocksLength , callback) => {
     }
 }
 
+//this function hardcodes the game
 export function drawGame(){
     drawMap(108 , createSky)
     drawMap(10 , createCloud)

@@ -7,9 +7,9 @@
 
 }
 body{
-    background-color: gray;
+    background-image: linear-gradient(to right top, #294c32, #153f34, #0c3131, #0e2328, #0e161a);
     font-family:  'Minecraft' ,   sans-serif , Arial, Helvetica, sans-serif;
-
+    height: 100vh;
 }
 
 /* game container */
