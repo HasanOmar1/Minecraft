@@ -17,6 +17,7 @@ body{
 width: 1498px;
 margin-left: 15%;
 height: 900px; 
+box-shadow: -9px -1px 32px 21px rgba(37, 62, 120, 0.75);
 
 }
 
@@ -28,8 +29,9 @@ height: 900px;
     height: 600px;
     top: 30px;
     left: 30px;
-    background-color: rgba(69, 25, 110 , .4)
-    
+    background-color: rgba(69, 25, 110 , .4);
+    border-radius: 30px;
+    box-shadow: -9px -1px 32px 21px rgba(137, 27, 93, 0.75);
 }
 
 #pick-axe ,
