@@ -10,6 +10,7 @@ body{
     background-image: linear-gradient(to right top, #294c32, #153f34, #0c3131, #0e2328, #0e161a);
     font-family:  'Minecraft' ,   sans-serif , Arial, Helvetica, sans-serif;
     height: 100vh;
+
 }
 
 /* game container */
@@ -18,6 +19,7 @@ width: 1498px;
 margin-left: 15%;
 height: 900px; 
 box-shadow: -9px -1px 32px 21px rgba(37, 62, 120, 0.75);
+
 
 }
 
@@ -31,7 +33,10 @@ box-shadow: -9px -1px 32px 21px rgba(37, 62, 120, 0.75);
     left: 30px;
     background-color: rgba(69, 25, 110 , .4);
     border-radius: 30px;
-    box-shadow: -9px -1px 32px 21px rgba(137, 27, 93, 0.75);
+    box-shadow: 2px -1px 32px 21px rgba(120,37,87,0.75);
+
+
+    
 }
 
 #pick-axe ,
@@ -43,17 +48,21 @@ box-shadow: -9px -1px 32px 21px rgba(37, 62, 120, 0.75);
     top: 30px;
     left: 50px;
     border: 3px solid blue;
+
+
   
 }
 
 #axe{
     top: 150px;
     left: 50px;
+
 }
 
 #shovel{
     top: 280px;
     left: 50px;
+
 }
 
 
@@ -66,6 +75,8 @@ img{
 #shovel:hover {
     background-color: darkcyan;
     cursor: pointer;
+    box-shadow: 2px -1px 32px 11px rgba(183, 77, 39, 0.75);
+
 }
 
 .inventory{
@@ -76,8 +87,10 @@ img{
     left: 70px;
     border: 2px solid black;
     cursor: pointer;
+    box-shadow: 2px -1px 32px 5px rgba(94, 98, 96, 0.75);
 
 }
+
 
 /* reset button */
 .reset{
@@ -103,6 +116,8 @@ img{
 
 .reset button:hover{
     background-color: red;
+    transition: transform 0.3s;
+    transform: scale(1.2);
 }
 
 .current{
