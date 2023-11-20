@@ -28,4 +28,4 @@ and you cant remove it again
 
 # Preview of the game
 
-![Alt text](game.png)
+![Alt text](assets/game.png)
