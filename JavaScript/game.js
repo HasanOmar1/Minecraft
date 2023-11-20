@@ -1,5 +1,5 @@
  
-import  * as draw  from "./Draw.js"
+import { playGame } from "./Game-settings.js";
 
 
 const backgroundMusic = new Audio('/audio/very-nice-song.mp4')
@@ -8,7 +8,7 @@ backgroundMusic.volume = 0.08
 backgroundMusic.loop = true;
 // play game
 function game(){
-draw.drawGame()
+playGame()
 }
 game()
 

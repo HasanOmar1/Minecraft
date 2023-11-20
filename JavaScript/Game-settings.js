@@ -8,7 +8,7 @@ const drawMap = (blocksLength , callback) => {
 }
 
 //this function hardcodes the game
-export function drawGame(){
+export function playGame(){
     drawMap(108 , createSky)
     drawMap(10 , createCloud)
     drawMap(27 , createSky)
