@@ -27,7 +27,12 @@ margin-top: 10%;
     cursor: pointer;
     background-color: transparent;
     color: white;
+    transition: transform 0.5s;
 
+}
+
+.start:hover{
+    transform: skew(30deg) rotate(10deg);
 }
 
 .start:hover{
