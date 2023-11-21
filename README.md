@@ -4,8 +4,6 @@ Site's link :
 
 https://2d-minecraft-i-think.netlify.app/
 
-### 97% FINISHED
-
 I have created a 2D minecraft game where you can clear the world and build new one as u wish!
 But there is a catch , you can only use the last element in the inventory to build your new world.
 
