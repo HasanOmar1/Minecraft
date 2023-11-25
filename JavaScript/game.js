@@ -1,23 +1,18 @@
- 
 import { playGame } from "./Game-settings.js";
 
-
-const backgroundMusic = new Audio('/audio/very-nice-song.mp4')
-backgroundMusic.play()
-backgroundMusic.volume = 0.08
+const backgroundMusic = new Audio("/audio/very-nice-song.mp4");
+backgroundMusic.play();
+backgroundMusic.volume = 0.03;
 backgroundMusic.loop = true;
 // play game
-function game(){
-playGame()
+function game() {
+  playGame();
 }
-game()
-
-
+game();
 
 // reset game
-const resetBtn = document.querySelector('#reset-game')
-resetBtn.addEventListener('click' , () => {
-    localStorage.clear()
-    window.location = window.location
-})
-
+const resetBtn = document.querySelector("#reset-game");
+resetBtn.addEventListener("click", () => {
+  localStorage.clear();
+  window.location = window.location;
+});
